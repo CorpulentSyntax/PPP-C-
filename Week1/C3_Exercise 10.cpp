@@ -9,16 +9,16 @@ int main() {
 	cin >> operation; 
 	cin >> val1 >> val2;
 	
-	if (operation == "+" || operation == "plus") {																//Als de operation + of plus is dan is de output val1 + val2
+	if (operation == "+" || operation == "plus") {					//Als de operation + of plus is dan is de output val1 + val2
 		cout << "Sum = " << val1 + val2 << "\n";
 	}
-	else if (operation == "-" || operation == "minus") {														//Als de operation - of minus is dan is de output val1 - val2
+	else if (operation == "-" || operation == "minus") {				//Als de operation - of minus is dan is de output val1 - val2
 		cout << "Minus = " << val1 - val2 << "\n";
 	}
-	else if (operation == "*" || operation == "mul") {															//Als de operation * of mul is dan is de output val1 * val2
+	else if (operation == "*" || operation == "mul") {				//Als de operation * of mul is dan is de output val1 * val2
 		cout << "Product = " << val1 * val2 << "\n";
 	}
-	else if (operation == "/" || operation == "div") {															//Als de operation / of div is dan is de output val1 / val2
+	else if (operation == "/" || operation == "div") {				//Als de operation / of div is dan is de output val1 / val2
 		cout << "Division = " << val1 / val2 << "\n";
 	}
 	else {
