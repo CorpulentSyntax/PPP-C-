@@ -11,7 +11,7 @@ int main() {
 	cout << "Please enter a range of 3 numbers (separated by a space): ";
 	cin >> val1 >> val2 >> val3;											
 	
-	if (val1 <= val2) {														//Vergelijkt de waardes en schrijft deze toe aan de variabele small, medium of large op basis van logica en vergelijking
+	if (val1 <= val2) {			//Vergelijkt de waardes en schrijft deze toe aan de variabele small, medium of large op basis van logica en vergelijking
 		if (val1 <= val3) {
 			small = val1;
 			if (val2 <= val3) {
@@ -48,7 +48,7 @@ int main() {
 		}
 	}
 
-	cout << small << ", " << medium << ", " << large << "\n";				//Outputs de 3 int waardes gesorteerd op waarde gescheiden door een komma
+	cout << small << ", " << medium << ", " << large << "\n";	//Outputs de 3 int waardes gesorteerd op waarde gescheiden door een komma
 	
 	system("pause");														
 	return 0;
