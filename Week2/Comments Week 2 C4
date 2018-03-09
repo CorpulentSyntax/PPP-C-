@@ -1,9 +1,8 @@
-Comment functie is M.I.A.
+Commenting is beetje fucked up.
 
-Gebruik dit template voor comments en plaats deze onder de vorige.
-----------------------------------
-Naam:
-Bestand:
-Regel code:
-Opmerking:
-----------------------------------
+Je kunt je wijziging aanbrengen in de tekst via knop "Edit".
+Opslaan doe je vervolgens onderaan met de knop "Commit", laat svp even een duidelijke log achter in de description field.
+
+Oude versies kun je terug zien in "Blame" en "History".
+Je kunt op elkaars veranderde code commenten via "Blame". Klik dan links op de link voor de veranderde tekst, 
+daar kun je op die wijiging commenten. (En oude versies terugzetten)
