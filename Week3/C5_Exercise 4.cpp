@@ -1,8 +1,8 @@
 #include "std_lib_facilities.h"
 
 double ctok(double c) {
-	if (c < -273.15) error("Temperature below absolute zero!");
-	double k = c + 273.15;
+	if (c < -273.15) error("Temperature below absolute zero!"); //If the temp in K is below 0K the computation is invalid
+	double k = c + 273.15; //Calculation used to calculate Kelvin from Celsius
 	return k;
 }
 
@@ -13,7 +13,7 @@ try {
 
 	cout << "Enter degrees in Celsius (C):\n";
 	cin >> d;
-	conv = ctok(d);
+	conv = ctok(d); //Calls up the ctok function
 	cout << d << " degrees Celsius is " << conv << " degrees Kelvin\n";
 
 	system("pause");
@@ -27,6 +27,6 @@ catch (exception& e) {
 }
 catch (...) {
 	cerr << "Unknown exception!\n"; \
-		system("pause");
+	system("pause");
 	return 2;
 }
