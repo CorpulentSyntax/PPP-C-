@@ -1,12 +1,12 @@
 #include "std_lib_facilities.h"
 
 double ctof(double c) {
-	double f = 9.0/5*c+32;
+	double f = 9.0/5*c+32; //Calculation used to calculate Fahrenheit from Celsius
 	return f;
 }
 
 double ftoc(double f) {
-	double c = (f-32)/(9.0/5);
+	double c = (f-32)/(9.0/5); //Calculation used to calculate Celsius from Fahrenheit
 	return c;
 }
 
@@ -15,19 +15,19 @@ int main() {
 	double conv;
 	char unit;
 
-	cout << "Enter degrees in Celsius (c/C) or Fahrenheit (f/F) followed by the unit:\n";
+	cout << "Enter where you want to calculate to (Celcius C/c or Fahrenheit F/f) followed by the value:" << endl;
 	cin >> deg >> unit;
 
-	if (unit == 'C' || unit == 'c') {
-		conv = ctof(deg);
-		cout << deg << " degrees Celsius is " << conv << " degrees Fahrenheit\n";
+	if (unit == 'F' || unit == 'f') {
+		conv = ctof(deg); //Calls up the ctof function if the unit is F or f
+		cout << deg << " degrees Celsius is " << conv << " degrees Fahrenheit" << endl;
 	}
-	else if (unit == 'F' || unit == 'f') {
-		conv = ftoc(deg);
-		cout << deg << " degrees Fahrenheit is " << conv << " degrees Celsius\n";
+	else if (unit == 'C' || unit == 'c') {
+		conv = ftoc(deg); //Calls up the ftoc function if the unit is C or c
+		cout << deg << " degrees Fahrenheit is " << conv << " degrees Celsius" << endl;
 	}
 	else {
-		cout << "Invalid unit used. Use C or F, please try again\n";
+		cout << "Invalid unit used. Use C or F, please try again" << endl; //Unit can only be C/c or F/f
 	}
 
 	system("pause");
