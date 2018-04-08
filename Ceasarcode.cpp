@@ -8,6 +8,7 @@ string read_text(void) {
 		if (input == "q") break; //If the input is 'q' the loop stops
 		s += input; //Removes whitespaces and concatenates string
 	}
+
 	return s;
 }
 
@@ -15,7 +16,7 @@ string string_to_upper(string s) {
 	for (int i = 0; i < s.length(); ++i) {
 		if (s[i] > 96 && s[i] < 123) s[i] -= 32; //If the char is lowercase change it to uppercase
 		if (s[i] > 64 && s[i] < 91) ; //Do nothing if char is already uppercase
-		else s[i] = 69; //All other chars become 'E'
+		else s[i] = 48; //All other chars become '0' for now
 	}
 
 	return s;
@@ -28,16 +29,21 @@ string ceasar_code(string s, int offset) {
 	if (offset < 0) error("Offset can't be negative!");
 	if (offset > 26) error("Offset too large!"); //Offset > 26 doesnt make sense, alphabet only has 26 letter and thus only 26 offsets make sense
 	for (int i = 0; i < s.length(); ++i) {
-		s[i] += offset; //Offsets each letter by the desired amount
-		if (s[i] > 90) s[i] -= 26; //If the offset passes the char 'Z' it continues at char 'A'
+		if (s[i] == 48) {  //Changes all other char (0) to the letter E
+			s[i] = 69;
+		}
+		else {
+			s[i] += offset; //Offsets each letter by the desired amount
+			if (s[i] > 90) s[i] -= 26; //If the offset passes the char 'Z' it continues at char 'A'
+		}
 	}
 	
 	return s;
 }
 
 void output_text(string s, int block_size, char delimeter) {
-	cout << endl << "Please enter the desired block size folowed by the delimiter: " << endl;
-	cin >> block_size >> delimeter;
+	cout << endl << "Please enter the desired block size: " << endl;
+	cin >> block_size;
 	if (block_size <= 0) error("Block size can't be negative or zero");
 	
 	vector<string> split_in_block;
@@ -63,7 +69,7 @@ int main()
 try {
 	int offset = 0;
 	int block_size = 0;
-	char delimeter = ' ';
+	char delimeter = '-';
 
 	string text = read_text();
 	text = string_to_upper(text);
