@@ -27,8 +27,8 @@ vector<int> sort_values(vector<int> dice_value) {
 }
 
 void output(vector<int> dice_value) {
-	int eyes = 6; //Starts the histogram at the minimum throwable value
-	for (int i = 0; i < 19; ++i) {
+	int eyes = 4; //Starts the histogram at the minimum throwable value
+	for (int i = 0; i < 21; ++i) {
 		cout << endl << eyes << ":\t"; //Outputs the amount of eyes
 		for (int j = 0; j < dice_value.size(); ++j) {
 			if (dice_value[j] == eyes) cout << "*"; //Outputs a asterisk if the value in the index = the current amount of eyes
